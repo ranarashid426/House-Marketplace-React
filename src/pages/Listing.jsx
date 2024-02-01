@@ -55,13 +55,29 @@ function Listing() {
       slidesPerView={1} pagination={{ clickable: true }}>
         {listing.imgUrls.map((url, index) => (
           <SwiperSlide key={index}>
-            <div
+            <div 
               style={{
-                background: `url(${listing.imgUrls[index]}) center no-repeat`,
-                backgroundSize: 'cover',
+                // background: `url(${listing.imgUrls[index]}) center no-repeat`,
+                // backgroundSize: 'cover',
+                objectFit:"cover",
+                height:"400px",
+                // backgroundSize:"contain"
+                
               }}
+              
               className='swiperSlideDiv'
-            ></div>
+            >
+
+              {/* {console.log(url)} */}
+              <img 
+              style={{
+                width:"100%",
+                height:"100%",
+                objectFit: "contain",
+                background:"center center/cover"
+              }}
+              key={index} src={url} alt="" />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
