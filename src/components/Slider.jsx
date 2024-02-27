@@ -26,7 +26,7 @@ function Slider() {
       let listings = []
 
       querySnap.forEach((doc) => {
-        console.log(doc.data().imgUrls[0])
+        // console.log(doc.data().imgUrls[0])
         return listings.push({
           id: doc.id,
           data: doc.data(),
@@ -64,29 +64,36 @@ function Slider() {
         >
           {listings.map(({ data,id }) => (
             <SwiperSlide
-              key={data.id}
+
+              key={id}
               onClick={() => navigate(`/category/${data.type}/${id}`)}
             >
-              <div
-                // style={{
-                //   background: `url(${data.imgUrls[0]}) center no-repeat`,
-                //   backgroundSize: 'cover',
-                // }}
+          <div
+                style={{
+                  width:"70vw",
+                      // margin:"auto",
+                      textAlign:"top"
+              }}
                 className='swiperSlideDiv'
                 
-              >
-                <img style={{background:"center no-repeat",
+              > <img style={{
+                  background:"center no-repeat",
                 backgroundSize:"cover",
-                width:"50%",
-                height:"50%",
-                alignSelf:'center'
+                width:"100%",
+                height:"100%",
+                textAlign:"center"
 
-              }} 
+               
+
+              }}  key={id} src={data.imgUrls[0]} alt="" />
+                <p id='slideImgText'
                 
                 
-                key={data.id} src={data.imgUrls[0]} alt="" />
-                <p className='swiperSlideText'>{data.name}</p>
-                <p className='swiperSlidePrice'>
+                className='swiperSlideText'>{data.name}</p>
+                <p className='swiperSlidePrice'
+                
+                id='priceTag'
+                >
                   ${data.discountedPrice ?? data.regularPrice}{' '}
                   {data.type === 'rent' && '/ month'}
                 </p>

@@ -344,7 +344,7 @@ button {
   left: 0;
   font-weight: 600;
   max-width: 90%;
-  font-size: 1.25rem;
+  font-size: 1.20rem;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 0.5rem;
 }
@@ -357,7 +357,7 @@ button {
 .swiperSlidePrice {
   color: #000000;
   position: absolute;
-  top: 143px;
+  top: 120px;
   left: 11px;
   font-weight: 600;
   max-width: 90%;
@@ -367,6 +367,7 @@ button {
 }
 @media (min-width: 1024px) {
   .swiperSlidePrice {
+    top: 145px;
     font-size: 1.25rem;
   }
 }
@@ -819,4 +820,50 @@ button {
   margin-left: 1rem;
   font-size: 0.8rem;
   opacity: 0.75;
+}
+
+
+/* Manual addition */
+
+
+@media only screen and (max-width: 768px) {
+  /* Your CSS rules for phones go here */
+
+  #slideImgText {
+    /* align-self: top; */
+    /* margin: auto; */
+    font-size: 12px;
+    /* width: 100%; */
+    text-align: center;
+    margin: 0;
+    padding: 4px;
+    
+    }
+
+    #priceTag {
+      margin:5px 0px;
+      /* padding: 0; */
+      text-align: center;
+    }
+}
+
+
+@media only screen and (max-width: 660) {
+  #slideImgText {
+    /* align-self: top; */
+    /* margin: auto; */
+    font-size: 10px;
+    /* width: 100%; */
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    
+    }
+
+    #priceTag {
+      /* margin:5px 0px; */
+      /* padding: 0; */
+      text-align: center;
+    }
+
 }
