@@ -58,8 +58,8 @@ function Slider() {
         <p className='exploreHeading'>Recommended</p>
     
         <Swiper slidesPerView={1} spaceBetween={50}
-        onSlideChange={()=>console.log('slide change')}
-        onSwiper={(swiper)=>console.log(swiper)}
+        
+        
         
         >
           {listings.map(({ data,id }) => (
